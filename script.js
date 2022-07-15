@@ -64,80 +64,32 @@ document
 	.addEventListener('click', () => {
 		console.log('clikcing');
 		document
-			.querySelector('.about-subheading')
+			.querySelector('.about-text')
 			.scrollIntoView(true);
 	});
-
-const changeSlide = function (direction) {
-	//guard clause if at the end of the loop
-	//Needs to move the whole UL left or right 1 space
-	// divide by length to get how much to move
-};
-
-let curSlide = 0;
-
-////Move the poster Slided/////
-// const changeSlide = function (dir) {
-// 	if (dir === 'forwards') {
-// 		if (curSlide < 2) {
-// 			curSlide++;
-// 			console.log(curSlide);
-// 		}
-// 	}
-// 	if (dir === 'back') {
-// 		if (curSlide > -2) {
-// 			curSlide--;
-// 			console.log(curSlide);
-// 		}
-// 	}
-// 	projectsContent.style.transform = `translateX(${
-// 		curSlide * -33.33
-// 	}%)`;
-// };
-
-let counter = 1;
-
-//current and next slide
-let imgCurrent = null;
-let imgNext = null;
 
 //make an array of objects with given info
 const posters = [
 	{
 		src: './img/niles-norman-poster.png',
-		text: 'Here is some text',
-		title: 'Here is a title',
-		subImgs: [
-			'./img/mountains-concept.png',
-			'./img/sealpup-sketch.PNG',
-		],
+		text: 'A return to classic 2D Animation, Niles Norman ‘s Traveling Adventures, brings back the feel of Saturday morning cartoons of the 90s with the quality and artisanship of animation classic films, while inspiring families with amazing adventures, educational  content, and edifying values in a light-hearted family entertainment show. ',
+		title: 'Niles Norman’s Traveling Adventures',
+		subImgs: ['./img/mountains-concept.png'],
+		textAdditional:
+			'Niles Norman’s Traveling Adventures  follows the traveling adventures of Niles Norman and his production team as they capture the wildlife, animals, sights, and experiences of amazing locations all over the world! Often finding themselves with an opportunity to help local people or wildlife, the Niles Norman team films their show within the show, providing a funny look into documentary and television production as they go about their adventure.',
+		imgAdditional: ['./img/brenda-concept-sketch.png'],
 	},
 	{
 		src: './img/SplashPoster.jpg',
-		text: 'learn to swim',
+		text: 'In the harsh but beautiful environment of the Arctic, a young Harp Seal pup must find his courage to overcome his fear of the water he was born to play in. ',
 		title: 'Splash! (2D Animated Short Film)',
-		subImgs: [
-			'./img/mountains-concept.png',
-			'./img/sealpup-sketch.PNG',
-		],
+		subImgs: ['./img/sealpup-sketch.PNG'],
 	},
 	{
 		src: './img/quest-of-heros-poster.jpg',
-		text: 'Here is some text',
-		title: 'Here is a title',
-		subImgs: [
-			'./img/mountains-concept.png',
-			'./img/sealpup-sketch.PNG',
-		],
-	},
-	{
-		src: './img/quest-of-heros-poster.jpg',
-		text: 'Here is some text',
-		title: 'Here is a title',
-		subImgs: [
-			'./img/mountains-concept.png',
-			'./img/sealpup-sketch.PNG',
-		],
+		text: 'A party of friends playing an online game inside of  the  Land of Kallyria, a fictional multiplayer online video game,  must together  face the challenges of  dangerous creatures, treacherous elements, former friends, and restore the land of Kallyria from the evil Queen. The Danger, Magic, Impossible Quests, Mythical Creatures,and in-game challenges they face  bring them closer together as friends and help them face their real life challenges outside in the real world.  ',
+		title: 'Quest of Heroes  (Original Animated Series)',
+		subImgs: [],
 	},
 ];
 
@@ -172,11 +124,24 @@ const createImg = function (index) {
 							posters[index].text
 						} </p>
 						<div class="project-imgs">
-							${projectsImgs(posters[index].subImgs)}
-
-							
-							
+							${projectsImgs(posters[index].subImgs)}			
 						</div>
+						<p class="poster-paragraph paragraph"> ${
+							posters[index].textAdditional
+								? posters[index].textAdditional
+								: ''
+						} </p>
+						<div class="project-imgs">
+							${
+								posters[index].imgAdditional
+									? projectsImgs(
+											posters[index].imgAdditional
+									  )
+									: ''
+							}			
+						</div>
+						
+						
 					</aside>
 				</div>
 			</li> `;
@@ -192,26 +157,35 @@ posters.forEach((poster, index) => {
 	createImg(index);
 });
 
-const movePosters = function (id, direction) {
-	let distance = -33;
-	if (direction === 'right') {
-		distance = 0;
-	}
+//Same as data ID of the farthest left image in view 0 based
+let currentImg = 0;
+
+const movePosters = function (id) {
 	projectsContent.style.transform = `translateX(${
-		+id * distance
+		id * -33.333
 	}%)`;
 };
 
 const togglePosters = function (clicked) {
 	//decide if opening or closing an element
-	//opening push left closing push right
-	let direction = 'left';
+	//closing, reset
 	if (clicked.classList.contains('projects-clicked')) {
-		direction = 'right';
+		if (posters.length > 3) {
+			document
+				.querySelector('.slider-btns')
+				.classList.remove('closed');
+		}
+		movePosters(+currentImg);
+	} else {
+		//opening, move to the data-id position
+		if (posters.length > 3) {
+			document
+				.querySelector('.slider-btns')
+				.classList.add('closed');
+		}
+		movePosters(clicked.dataset.id);
 	}
 	clicked.classList.toggle('projects-clicked');
-	//Needs to know the order and which way to move
-	movePosters(clicked.dataset.id, direction);
 
 	//centers the poster in the view
 	document
@@ -224,8 +198,7 @@ const posterImgs = document.querySelectorAll('.poster-img');
 posterImgs.forEach((poster) => {
 	poster.addEventListener('click', function (e) {
 		//toggle open or closed when clicked
-		let clicked = e.target.closest('.projects-poster');
-		togglePosters(clicked);
+		togglePosters(e.target.closest('.projects-poster'));
 	});
 });
 
@@ -233,26 +206,30 @@ document
 	.querySelectorAll('.poster-close')
 	.forEach((element) => {
 		element.addEventListener('click', function (e) {
-			let clicked = e.target.closest('.projects-poster');
-			togglePosters(clicked);
+			togglePosters(e.target.closest('.projects-poster'));
 		});
 	});
 
-// KEEEP THIS
 ///Listen for clicks on the slider arrows
-const sliderForwardListener = function () {
+////Only Add if Btns are present(4 or more posters)
+if (posters.length > 3) {
 	btnForward.addEventListener('click', function () {
-		movePosters(1, 'left');
+		if (currentImg < posters.length - 3) {
+			currentImg++;
+			movePosters(+currentImg);
+			console.log(currentImg);
+		}
 	});
-};
-const sliderBackListener = function () {
 	btnBack.addEventListener('click', function () {
-		changeSlide(1, 'right');
+		if (currentImg > 0) {
+			currentImg--;
+			movePosters(+currentImg);
+			console.log(currentImg);
+		}
 	});
-};
-
-sliderForwardListener();
-sliderBackListener();
+} else {
+	document.querySelector('.slider-btns').remove();
+}
 
 const clickListener = function (clickEl, closeEl) {
 	clickEl.addEventListener('click', function () {
@@ -266,6 +243,10 @@ clickListener(
 	createForm
 );
 clickListener(
+	document.querySelector('.create-with-us'),
+	createForm
+);
+clickListener(
 	document.querySelector('.create-close'),
 	createForm
 );
@@ -274,6 +255,10 @@ clickListener(
 
 clickListener(
 	document.querySelector('.supporter-btn'),
+	supporterForm
+);
+clickListener(
+	document.querySelector('.become-a-supporter'),
 	supporterForm
 );
 clickListener(

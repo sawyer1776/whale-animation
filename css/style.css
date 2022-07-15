@@ -58,6 +58,22 @@ body {
 	visibility: hidden;
 }
 
+.btn {
+	font-family: 'Roboto Slab';
+	text-transform: uppercase;
+	font-size: var(--font-s-3);
+	font-weight: 600;
+	letter-spacing: 1px;
+	padding: 1rem 2rem;
+	display: inline-block;
+	text-align: center;
+	width: fit-content;
+
+	border: none;
+
+	/* text-transform: uppercase; */
+}
+
 .link {
 	text-decoration: none;
 	color: inherit;
@@ -109,22 +125,6 @@ body {
 .rounded {
 	border-radius: 0.75rem;
 } */
-
-.btn {
-	font-family: 'Roboto Slab';
-	text-transform: uppercase;
-	font-size: var(--font-s-3);
-	font-weight: 600;
-	letter-spacing: 1px;
-	padding: 1rem 2rem;
-	display: inline-block;
-	text-align: center;
-	width: fit-content;
-
-	border: none;
-
-	/* text-transform: uppercase; */
-}
 
 .btn-color-light {
 	color: var(--color-primary-light);
@@ -289,6 +289,34 @@ body {
 	text-align: right;
 }
 
+.breadcrumb-more {
+	color: var(--wht);
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	font-size: var(--font-s-3);
+	opacity: 100%;
+	gap: 1rem;
+	transition: all 150ms;
+}
+.breadcrumb-title {
+	margin: 0;
+	padding: 0;
+}
+
+.breadcrumb-img {
+	width: 7rem;
+	object-fit: contain;
+	transform: translateY(-30%);
+}
+
+.breadcrumb-more:hover,
+.breadcrumb-more:active {
+	transform: translateX(-50%) scale(1.055);
+}
+
 /* .hero-logo {
 	align-content: center;
 	width: 18rem;
@@ -394,7 +422,7 @@ body {
 
 /* If projects is parent class show the expanded */
 .projects-clicked .poster-wide {
-	width: 168vh;
+	width: 164.5vh;
 
 	z-index: 9001;
 }
@@ -426,6 +454,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	margin-bottom: 2rem;
 }
 
 .project-img {
@@ -749,6 +778,7 @@ body {
 	/* height: 41vw; */
 	object-fit: contain;
 	margin-bottom: 0;
+	transform: translateY(0.2rem);
 }
 
 .footer-title {
@@ -757,7 +787,9 @@ body {
 }
 .footer-link {
 	font-size: var(--font-s-3);
-	padding: 1rem;
+	font-weight: 300;
+	text-transform: none;
+	padding: 0rem;
 }
 
 .footer-logos {
