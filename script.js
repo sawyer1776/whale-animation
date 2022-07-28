@@ -21,10 +21,19 @@ const breadcrumbMore = document.querySelector(
 	'.breadcrumb-more'
 );
 
+const photoContainer = document.querySelector(
+	'.photo-container'
+);
+const photoTwo = document.querySelector('.photo-2');
 setTimeout(() => {
-	console.log('?');
 	breadcrumbMore.classList.remove('hide-crumb');
 }, 2000);
+
+const lockPhoto = function () {
+	photoTwo.classList.toggle('lock');
+};
+
+photoContainer.addEventListener('click', lockPhoto);
 
 //function for scroll over
 function highlight(el) {

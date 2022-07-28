@@ -670,24 +670,38 @@ body {
 	max-width: 35vw;
 }
 
+.photo-container {
+	position: relative;
+	overflow: hidden;
+}
 .create-photo {
 	flex-shrink: 0;
-	object-fit: cover;
+	object-fit: contain;
 
 	width: 55vw;
 	height: 30.903732809430252vw;
-	background-image: url('../img/balloon-thumbnail.png');
+	/* background-image: url('../img/balloon-thumbnail.png');
 	background-size: contain;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat; */
 	/* border-radius: 1rem; */
-	transition: all 1000ms;
+	transition: all 1800ms;
 }
 
-.create-photo:hover,
-.create-photo:active {
-	background-image: url('../img/hot-balloon-characters.png');
+.photo-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
 }
 
+.photo-2:hover,
+.photo-2:active {
+	opacity: 100%;
+}
+
+.photo-2.lock {
+	opacity: 100%;
+}
 .create-close {
 	color: var(--wht);
 	font-size: var(--font-s-6);
