@@ -17,6 +17,15 @@ const toggleElement = function (element) {
 	element.classList.toggle('closed');
 };
 
+const breadcrumbMore = document.querySelector(
+	'.breadcrumb-more'
+);
+
+setTimeout(() => {
+	console.log('?');
+	breadcrumbMore.classList.remove('hide-crumb');
+}, 2000);
+
 //function for scroll over
 function highlight(el) {
 	el.classList.add('link-highlight');
