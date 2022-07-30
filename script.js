@@ -42,10 +42,8 @@ const lockPhoto = function () {
 };
 
 navLinks.addEventListener('click', () => {
-	navLinks.style.transform = `translateX(120%)`;
 	setTimeout(() => {
 		toggleMobile(navLinks);
-		navLinks.style.transform = `translateX(0)`;
 	}, 950);
 });
 hamburgerOpen.addEventListener('click', () => {
@@ -109,19 +107,19 @@ document
 //make an array of objects with given info
 const posters = [
 	{
-		src: './img/niles-norman-poster.png',
+		src: './img/niles-norman-poster.jpg',
 		text: 'A return to classic 2D Animation, Niles Norman ‘s Traveling Adventures, brings back the feel of Saturday morning cartoons of the 90s with the quality and artisanship of animation classic films, while inspiring families with amazing adventures, educational  content, and edifying values in a light-hearted family entertainment show. ',
 		title: 'Niles Norman’s Traveling Adventures',
-		subImgs: ['./img/mountains-concept.png'],
+		subImgs: ['./img/mountains-concept.jpg'],
 		textAdditional:
 			'Niles Norman’s Traveling Adventures  follows the traveling adventures of Niles Norman and his production team as they capture the wildlife, animals, sights, and experiences of amazing locations all over the world! Often finding themselves with an opportunity to help local people or wildlife, the Niles Norman team films their show within the show, providing a funny look into documentary and television production as they go about their adventure.',
-		imgAdditional: ['./img/brenda-concept-sketch.png'],
+		imgAdditional: ['./img/brenda-concept-sketch.jpg'],
 	},
 	{
 		src: './img/SplashPoster.jpg',
 		text: 'In the harsh but beautiful environment of the Arctic, a young Harp Seal pup must find his courage to overcome his fear of the water he was born to play in. ',
 		title: 'Splash! (2D Animated Short Film)',
-		subImgs: ['./img/sealpup-sketch.PNG'],
+		subImgs: ['./img/sealpup-sketch.jpg'],
 	},
 	{
 		src: './img/quest-of-heros-poster.jpg',
@@ -137,6 +135,7 @@ const projectsImgs = function (imgs) {
 	imgs.forEach((img) => {
 		markup += `<img
 				class="project-img"
+				alt="Concept image"
 				src="${img}"
 			/>`;
 	});
@@ -149,7 +148,7 @@ const createImg = function (index) {
 			
 			 <img src="${
 					posters[index].src
-				}" class="poster-img shadow" /> 
+				}" class="poster-img shadow" alt="Poster of Animation Project"/> 
 		
 			<aside class="poster-content">
 						<div class="poster-close">
