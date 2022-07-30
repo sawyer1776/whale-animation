@@ -2,19 +2,27 @@ const projectsContent = document.querySelector(
 	'.projects-content'
 );
 const createForm = document.querySelector('.create-form');
-
 const supporterForm = document.querySelector(
 	'.supporter-form'
 );
-
 const btnForward = document.querySelector(
 	'.btn-slider-forward'
 );
 const btnBack = document.querySelector('.btn-slider-back');
+const hamburgerClose = document.querySelector(
+	'.hamburger-close'
+);
+const hamburgerOpen = document.querySelector(
+	'.nav-hamburger'
+);
+const navLinks = document.querySelector('.nav-links');
 
 //Generic function for closing an element arg is the element to be closed
 const toggleElement = function (element) {
 	element.classList.toggle('closed');
+};
+const toggleMobile = function (element) {
+	element.classList.toggle('closed-mobile');
 };
 
 const breadcrumbMore = document.querySelector(
@@ -32,6 +40,18 @@ setTimeout(() => {
 const lockPhoto = function () {
 	photoTwo.classList.toggle('lock');
 };
+
+navLinks.addEventListener('click', () => {
+	navLinks.style.transform = `translateX(120%)`;
+	setTimeout(() => {
+		toggleMobile(navLinks);
+		navLinks.style.transform = `translateX(0)`;
+	}, 950);
+});
+hamburgerOpen.addEventListener('click', () => {
+	toggleMobile(navLinks);
+	console.log('click');
+});
 
 photoContainer.addEventListener('click', lockPhoto);
 

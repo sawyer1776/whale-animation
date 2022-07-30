@@ -21,7 +21,8 @@
 <body>
 	<nav class="navbar max-width">
 		<a class="logo link" href="#"> <img class="logo-img" src="img/logo-horizontal.png" alt=""> </a>
-		<ul class="nav-links">
+		<ion-icon class="nav-hamburger" name="menu-sharp"></ion-icon>
+		<ul class="nav-links closed-mobile">
 			<li class="nav-link">
 				<a class="link" href="#projects"><span class="" onmouseout="offlight(this)"
 						onmouseover="highlight(this)">Projects</span></a>
@@ -38,6 +39,7 @@
 				<a class="link" href="#support"><span class="" onmouseout="offlight(this)" onmouseover="highlight(this)">Support
 						Us</span></a>
 			</li>
+			<ion-icon class="hamburger-close" name="close-sharp"></ion-icon>
 		</ul>
 	</nav>
 	<section class="section hero-section">
@@ -52,7 +54,7 @@
 			</div>
 		</a>
 	</section>
-	<section class="section projects-section center">
+	<section class="section projects-section center" id="projects">
 		<div class="slider-btns">
 			<div class="btn btn-slider-back">
 				<ion-icon class="slider-btn" name="chevron-back-outline"></ion-icon>
@@ -61,7 +63,6 @@
 				<ion-icon class="slider-btn" name="chevron-forward-outline"></ion-icon>
 			</div>
 		</div>
-		<span class="anchor" id="projects"></span>
 		<h2 class="heading projects-heading">Projects</h2>
 		<ul class="projects-content">
 			<!-- each poster with hidden expansion content -->
@@ -84,10 +85,9 @@
 				</div>
 			</li> -->
 	</section>
-	<section class="section about-section">
-		<h2 class="heading about-heading">About Us </h2>
-		<span class="anchor" id="about-us"></span>
-		<div class="about-content">
+	<section class="section about-section" id="about-us">
+		<h2 class=" heading about-heading">About Us </h2>
+		<div class=" about-content">
 			<div class="about-subheading-pos  ">
 				<h3 class="about-subheading sub-background"> We are Collaborators, Dreamers, Artists, and most importantly Story
 					Tellers. </h3>
@@ -127,8 +127,7 @@
 			<span class="btn about-close-btn">Close ⬆</span>
 		</div>
 	</section>
-	<section class="section create-section center">
-		<span class="anchor" id="jobs"></span>
+	<section class="section create-section center" id="jobs">
 		<div class="create-text center">
 			<h2 class="heading create-heading"> Create with us </h2>
 			<div class="create-content">
@@ -150,7 +149,7 @@
 				</div>
 				<form class="create-form  form-container closed" name="create-form" netlify>
 					<div class="form-content">
-						<div class="form-column">
+						<div class="form-column create-form-inputs">
 							<div class="create-close btn">
 								<ion-icon name="close-outline"></ion-icon>
 							</div>
@@ -195,8 +194,7 @@
 		</div>
 		</div>
 	</section>
-	<section class="supporter-section section center">
-		<span class="anchor" id="support"></span>
+	<section id="support" class="supporter-section section center">
 		<h2 class="heading supporter-heading"> Supporter Contact </h2>
 		<div class="supporter-content">
 			<img class="supporter-photo" src="img/PetStand_Transparent.png" alt="Man at work drawing" />

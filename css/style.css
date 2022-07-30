@@ -8,9 +8,6 @@ html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
-.wrapgrid {
-	overflow-x: hidden;
-}
 
 body {
 	overflow-x: hidden;
@@ -74,7 +71,7 @@ body {
 
 .max-width {
 	width: 100vw;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .subheading {
@@ -145,7 +142,7 @@ body {
 
 	bottom: 0;
 	left: 0;
-	z-index: 999;
+	z-index: 99;
 }
 
 .form-content {
@@ -196,19 +193,28 @@ body {
 	justify-content: space-between;
 	display: flex;
 	align-items: center;
-	padding: 8rem 15rem;
+	padding: 2.5rem 15rem;
 	list-style: none;
 	background-color: var(--color-primary-dark);
 	color: var(--wht);
 	position: fixed;
 	box-shadow: 0 0.5rem 1rem 0.75rem rgba(0, 0, 0, 0.275);
-	z-index: 1000;
-	height: 7.5rem;
+	z-index: 100;
+	height: fit-content;
 }
 
 .logo-img {
 	height: 12rem;
 	object-fit: contain;
+}
+
+.nav-hamburger {
+	font-size: var(--font-s-8);
+	display: none;
+}
+
+.hamburger-close {
+	display: none;
 }
 
 .link-highlight {
@@ -246,7 +252,6 @@ body {
 }
 
 .section {
-	overflow: hidden;
 	margin-bottom: 18rem;
 }
 
@@ -338,10 +343,7 @@ body {
 	justify-content: center;
 	width: 100vw;
 	overflow-x: hidden;
-
 	margin-bottom: 8rem;
-
-	/* overflow-x: hidden; */
 }
 
 .slider-btns {
@@ -423,9 +425,6 @@ body {
 	display: flex;
 	width: 48.5vh;
 	height: 75vh;
-
-	/* overflow: hidden; */
-
 	background-color: var(--color-primary);
 	transition: width 700ms;
 }
@@ -434,7 +433,7 @@ body {
 .projects-clicked .poster-wide {
 	width: 164.5vh;
 
-	z-index: 9001;
+	z-index: 99;
 }
 
 .projects-clicked .poster-content {
@@ -852,9 +851,7 @@ body {
 	}
 
 	.navbar {
-		padding: 3rem 7rem;
-
-		height: 12rem;
+		padding: 1rem 7rem;
 	}
 	.section-footer {
 		margin-bottom: 0;
@@ -886,9 +883,7 @@ body {
 	}
 
 	.navbar {
-		padding: 2rem 5rem;
-
-		height: 7.5rem;
+		padding: 0.5rem 5rem;
 	}
 
 	.logo-img {
@@ -929,6 +924,10 @@ body {
 
 /* Virtical tablets 1088px*/
 @media (max-width: 68em) {
+	.closed-mobile {
+		display: none;
+	}
+
 	.hero-logo {
 		height: 53vh;
 	}
@@ -944,19 +943,36 @@ body {
 	}
 
 	/* HAMBURGER IT */
-	/* .navbar {
-		padding: 2rem 5rem;
 
-		height: 7.5rem;
-	} */
-
-	/* .logo-img {
-		height: 6rem;
-	} */
-	.nav-links {
-		display: none;
-		gap: 0rem;
+	.logo-img {
+		height: 10rem;
 	}
+
+	.nav-hamburger {
+		display: block;
+	}
+
+	.nav-links {
+		transition: all 650ms;
+		position: fixed;
+		top: 0;
+		right: 0;
+		padding: 6rem;
+		font-size: var(--font-s-8);
+		background-color: var(--color-alt-dark);
+
+		flex-direction: column;
+		gap: 6rem;
+		z-index: 3;
+	}
+
+	.hamburger-close {
+		display: block;
+		position: fixed;
+		top: 2rem;
+		right: 2rem;
+	}
+
 	.breadcrumb-img {
 		width: 7rem;
 	}
@@ -1054,9 +1070,13 @@ body {
 		max-width: 60vw;
 	}
 
-	.form-img-bee {
-		order: -1;
+	.form-img {
+		order: 1;
 	}
+	.create-form-inputs {
+		order: 1;
+	}
+
 	.supporter-content {
 		flex-direction: column;
 		gap: 0;
@@ -1118,18 +1138,28 @@ body {
 		--font-s-8: 4.76rem;
 	}
 
-	/* .nav-links {
-		flex-direction: column;
-		position: absolute;
-		right: 0;
-		top: 0;
-		gap: 5rem;
-		background-color: var(--color-alt-dark);
-		padding: 4rem;
+	.navbar {
+		padding: 1rem;
+	}
 
-		font-size: var(--font-s-6);
-		font-weight: 500;
-	} */
+	.logo-img {
+		height: 4rem;
+	}
+
+	.nav-links {
+		transition: all 650ms;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100%;
+		padding: 2.5rem;
+		font-size: var(--font-s-7);
+
+		flex-direction: column;
+		gap: 6rem;
+		z-index: 3;
+	}
+
 	.breadcrumb-more {
 		font-size: var(--font-s-1);
 	}
@@ -1161,14 +1191,29 @@ body {
 		font-size: var(--font-s-3);
 		line-height: 1.5;
 	}
+
+	.supporter-content {
+		margin: 0;
+	}
+
+	.supporter-section {
+		margin: 0 auto;
+	}
+
 	.footer-logo {
 		height: 6rem;
 	}
+
 	.section-footer {
 		margin-bottom: 0;
 		flex-direction: column;
+
 		padding: 6rem 3rem;
 		gap: 5rem;
+	}
+
+	.footer-link {
+		text-align: left;
 	}
 }
 
