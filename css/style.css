@@ -878,9 +878,12 @@ body {
 
 		height: 12rem;
 	}
+	.section-footer {
+		margin-bottom: 0;
+	}
 }
-/* 1200px */
-@media (max-width: 75em) {
+/* 1350px */
+@media (max-width: 84.375em) {
 	:root {
 		--font-s-1: 1rem;
 		--font-s-2: 1.25rem;
@@ -943,6 +946,9 @@ body {
 	.supporter-btns {
 		gap: 2rem;
 	}
+	.section-footer {
+		margin-bottom: 0;
+	}
 }
 
 /* for taller than 16/9 */
@@ -966,6 +972,9 @@ body {
 	}
 	.projects-clicked .poster-wide {
 		width: 100vw;
+	}
+	.section-footer {
+		margin-bottom: 0;
 	}
 }
 
