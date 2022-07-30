@@ -74,6 +74,7 @@ body {
 
 .max-width {
 	width: 100vw;
+	overflow: hidden;
 }
 
 .subheading {
@@ -952,9 +953,10 @@ body {
 	/* .logo-img {
 		height: 6rem;
 	} */
-	/* .nav-links {
+	.nav-links {
+		display: none;
 		gap: 0rem;
-	} */
+	}
 	.breadcrumb-img {
 		width: 7rem;
 	}
@@ -1115,9 +1117,7 @@ body {
 		--font-s-7: 3.85rem;
 		--font-s-8: 4.76rem;
 	}
-	.navbar {
-		position: relative;
-	}
+
 	/* .nav-links {
 		flex-direction: column;
 		position: absolute;
