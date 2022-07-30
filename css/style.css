@@ -8,6 +8,9 @@ html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
+.wrapgrid {
+	overflow-x: hidden;
+}
 
 body {
 	overflow-x: hidden;
@@ -15,24 +18,19 @@ body {
 	line-height: 1;
 	font-weight: 400;
 	color: #2c2c2c;
-
-	/* position: relative; */
 }
 
 :root {
 	--wht: #fff;
 	--color-primary: #230059;
 	--color-primary-dark: #230059;
-	/* --color-primary-dark: #130030; */
 	--color-primary-med: #971dd5;
 	--color-primary-light: #8025fe;
-
 	--color-alt-dark: #4715ab;
 	--color-alt-med: #ffffff;
 	--color-alt-ligh: #82fcff;
 	--color-alt-very-light: #e6feff;
 	/* major third 1.250 */
-
 	--font-s-1: 3.053rem;
 	--font-s-2: 3.85rem;
 	--font-s-3: 4.76rem;
@@ -66,10 +64,7 @@ body {
 	display: inline-block;
 	text-align: center;
 	width: fit-content;
-
 	border: none;
-
-	/* text-transform: uppercase; */
 }
 
 .link {
@@ -92,7 +87,6 @@ body {
 .heading {
 	font-family: 'Raleway', sans-serif;
 	font-size: var(--font-s-8);
-	/* text-transform: uppercase; */
 	letter-spacing: 0.25rem;
 	margin-bottom: 8rem;
 }
@@ -100,7 +94,6 @@ body {
 .heading-small {
 	font-family: 'Raleway', sans-serif;
 	font-size: var(--font-s-6);
-	/* text-transform: uppercase; */
 	letter-spacing: 0.25rem;
 	margin-bottom: 2rem;
 }
@@ -252,10 +245,8 @@ body {
 }
 
 .section {
-	width: 100vw;
-	margin-bottom: 18rem;
-	position: relative;
 	overflow: hidden;
+	margin-bottom: 18rem;
 }
 
 /* ---------- HERO SECTION -------------- */
@@ -283,8 +274,6 @@ body {
 
 .hero-logo {
 	height: 60vh;
-	/* transform: translateY(-15%); */
-	/* justify-self: center; */
 }
 
 .hero-post-heading {
@@ -346,11 +335,12 @@ body {
 .projects-section {
 	text-align: center;
 	justify-content: center;
-	width: 168vh;
+	width: 100vw;
+	overflow-x: hidden;
+
 	margin-bottom: 8rem;
 
-	overflow-x: hidden;
-	position: relative;
+	/* overflow-x: hidden; */
 }
 
 .slider-btns {
@@ -892,8 +882,6 @@ body {
 	}
 	.btn {
 		padding: 1rem 2rem;
-
-		/* text-transform: uppercase; */
 	}
 
 	.navbar {
@@ -914,9 +902,6 @@ body {
 		transform: translateY(-30%);
 	}
 
-	.projects-section {
-		margin-bottom: 3rem;
-	}
 	.poster-content {
 		padding: 2rem;
 	}
