@@ -142,7 +142,7 @@ body {
 
 	bottom: 0;
 	left: 0;
-	z-index: 99;
+	z-index: 999;
 }
 
 .form-content {
@@ -704,8 +704,8 @@ body {
 	color: var(--wht);
 	font-size: var(--font-s-6);
 	position: absolute;
-	right: -6rem;
-	top: -3rem;
+	right: -1rem;
+	top: -1rem;
 	z-index: 10;
 }
 .form-column {
@@ -1059,9 +1059,11 @@ body {
 
 	.form-content {
 		flex-direction: column;
+		margin-top: 0rem;
 
 		font-size: var(--font-s-3);
 	}
+
 	.form-column {
 		display: flex;
 		flex-direction: column;
@@ -1190,6 +1192,22 @@ body {
 	.about-text {
 		font-size: var(--font-s-3);
 		line-height: 1.5;
+	}
+
+	.form-text {
+		font-size: var(--font-s-2);
+	}
+
+	.form-content {
+		top: 0;
+		gap: 1rem;
+	}
+
+	.form-img-bee {
+		width: 5rem;
+	}
+	.form-img {
+		width: 12rem;
 	}
 
 	.supporter-content {
