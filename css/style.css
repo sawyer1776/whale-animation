@@ -110,10 +110,6 @@ body {
 	text-align: left;
 	margin-bottom: 2rem;
 }
-/* 
-.rounded {
-	border-radius: 0.75rem;
-} */
 
 .btn-color-light {
 	color: var(--color-primary-light);
@@ -176,15 +172,10 @@ body {
 }
 
 .form-box {
-	/* height: 3rem; */
-
 	padding: 0.3rem;
 	font-size: var(--font-s-4);
 	border-radius: 0;
 	border: none;
-
-	/* border-bottom: 0.25rem solid var(--color-primary);
-	background-color: var(--color-primary-light); */
 }
 
 /* -------NAVIGATION--------- */
@@ -245,7 +236,6 @@ body {
 
 .nav-link {
 	padding-right: 4rem;
-	/* display: flex; */
 }
 .nav-link:last-child {
 	padding: 0;
@@ -256,9 +246,6 @@ body {
 }
 
 /* ---------- HERO SECTION -------------- */
-.hero-section {
-	/* position: relative; */
-}
 
 .hero-content {
 	background-image: linear-gradient(
@@ -336,7 +323,6 @@ body {
 } */
 
 /* --------PROJECTS --------- */
-/* Values */
 
 .projects-section {
 	text-align: center;
@@ -391,19 +377,17 @@ body {
 }
 
 .poster-img {
-	/* scroll-snap-align: center; */
 	width: 49vh;
 	height: 75vh;
 	object-fit: cover;
-	/* border-radius: 0.45rem; */
-	/* box-shadow: 0 0rem 0.5rem 0.45rem rgba(0, 0, 0, 0.075); */
+
 	transition: all 250ms;
 }
 
 .poster-img:active,
 .poster-img:hover {
 	transform: scale(1.05);
-	/* box-shadow: 0 0rem 0.4rem 0.35rem rgba(0, 0, 0, 0.062); */
+
 	cursor: pointer;
 }
 
@@ -468,7 +452,6 @@ body {
 
 .project-img {
 	max-width: 100%;
-	/* height: 15vw; */
 	object-fit: cover;
 }
 
@@ -543,9 +526,6 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-/* .about-expansion-content.closed {
-	height: 0rem;
-} */
 
 .about-expansion-content {
 	width: 75vw;
@@ -631,15 +611,7 @@ body {
 }
 
 /* -------create--------- */
-/* .create-section {
-	padding-bottom: 41vw;
-	background-image: url('../img/Flowers_Transparent.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position-y: 41vw;
-	width: 100vw;
-	border-bottom: 0.35rem solid var(--color-primary-dark);
-} */
+
 .create-heading {
 	text-align: center;
 	color: var(--color-primary-dark);
@@ -678,10 +650,6 @@ body {
 
 	width: 55vw;
 	height: 30.903732809430252vw;
-	/* background-image: url('../img/balloon-thumbnail.png');
-	background-size: contain;
-	background-repeat: no-repeat; */
-	/* border-radius: 1rem; */
 	transition: all 1800ms;
 }
 
@@ -744,16 +712,7 @@ body {
 	width: 45vw;
 	height: 50vw;
 	align-self: flex-start;
-
-	/* border-radius: 1rem; */
 }
-
-/* .modal {
-	width: 100vw;
-	height: 100vh;
-	background-color: #04062ec1;
-	position: fixed;
-} */
 
 .supporter-close {
 	color: var(--wht);
@@ -789,7 +748,6 @@ body {
 }
 .footer-img {
 	width: 100vw;
-	/* height: 41vw; */
 	object-fit: contain;
 	margin-bottom: 0;
 	transform: translateY(0.3rem);
@@ -816,9 +774,7 @@ body {
 	list-style: none;
 	display: flex;
 	justify-content: left;
-
 	gap: 4rem;
-	/* margin-bottom: 2rem; */
 }
 
 .copyright {
@@ -941,8 +897,6 @@ body {
 		--font-s-7: 5.96rem;
 		--font-s-8: 7.451rem;
 	}
-
-	/* HAMBURGER IT */
 
 	.logo-img {
 		height: 10rem;
@@ -1086,8 +1040,6 @@ body {
 	.supporter-photo {
 		width: 90vw;
 		height: 100vw;
-
-		/* border-radius: 1rem; */
 	}
 	.supporter-text {
 		margin: 0;
