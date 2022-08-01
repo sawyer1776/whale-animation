@@ -335,7 +335,7 @@ body {
 	justify-content: center;
 	max-width: 100vw;
 	overflow-x: hidden;
-	padding: 4rem 6rem;
+	margin: 0 auto;
 }
 
 .slider-btns {
@@ -368,8 +368,8 @@ body {
 	max-width: 100vw;
 }
 .projects-content-container {
-	background-color: rebeccapurple;
-	padding: 3vh;
+	padding: 0;
+	margin: 0;
 	max-width: var(--poster-content-w);
 	display: flex;
 	justify-content: flex-start;
@@ -377,13 +377,11 @@ body {
 	position: relative;
 }
 .projects-content {
-	background-color: red;
 	display: flex;
-	padding: 3vh;
+	padding: 0;
 	max-width: var(--poster-content-w);
 	margin: 0;
 	gap: 7vh;
-
 	list-style: none;
 	position: relative;
 	transition: all ease-in-out 800ms;
@@ -917,6 +915,20 @@ body {
 		--poster-content-w: 58vh;
 	}
 
+	.poster-img {
+		width: 58vh;
+		height: 90vh;
+		object-fit: cover;
+		margin: 0;
+		padding: 0;
+		transition: all 250ms;
+	}
+	.poster-wide {
+		width: 58vh;
+		height: 90vh;
+		transition: all 700ms;
+	}
+
 	.logo-img {
 		height: 10rem;
 	}
@@ -942,8 +954,8 @@ body {
 	.hamburger-close {
 		display: block;
 		position: fixed;
-		top: 2rem;
-		right: 2rem;
+		top: 0rem;
+		right: 0rem;
 	}
 
 	.projects-content {
@@ -951,9 +963,6 @@ body {
 		flex: none;
 		scroll-snap-type: x mandatory;
 	}
-	/* .no-scroll {
-		overflow-x: hidden;
-	} */
 
 	.projects-poster {
 		scroll-snap-align: center;
