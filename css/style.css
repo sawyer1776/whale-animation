@@ -38,6 +38,9 @@ body {
 	--font-s-8: 14.552rem;
 
 	--duration: 450ms;
+	/* 3 = 167 2 = 112 1 = 58 */
+	--poster-content-w: 167vh;
+
 	--tileWidth: 25rem;
 	--tileHeight: (var(--tileWidth) / (5/7));
 	--iconSize: 5rem;
@@ -342,7 +345,7 @@ body {
 	justify-content: space-between;
 	position: absolute;
 	top: 50%;
-	z-index: 1;
+	z-index: 999;
 }
 
 .slider-btn {
@@ -356,8 +359,8 @@ body {
 
 .slider-btn:hover,
 .slider-btn:active {
-	background-color: #04062e56;
-	color: white;
+	/* background-color: #04062e56; */
+	color: rgb(66, 66, 66);
 }
 
 .projects-heading {
@@ -367,17 +370,20 @@ body {
 .projects-content-container {
 	background-color: rebeccapurple;
 	padding: 3vh;
-	max-width: 167vh;
+	max-width: var(--poster-content-w);
 	display: flex;
 	justify-content: flex-start;
-	overflow-x: scroll;
+	overflow-x: hidden;
+	position: relative;
 }
 .projects-content {
 	background-color: red;
 	display: flex;
-	padding: 0;
+	padding: 3vh;
+	max-width: var(--poster-content-w);
 	margin: 0;
 	gap: 7vh;
+
 	list-style: none;
 	position: relative;
 	transition: all ease-in-out 800ms;
@@ -413,7 +419,7 @@ body {
 	flex-direction: column;
 	padding: 10rem;
 	color: var(--wht);
-	/* overflow-y: scroll; */
+	overflow-y: scroll;
 	position: relative;
 }
 
@@ -908,6 +914,7 @@ body {
 		--font-s-6: 4.76rem;
 		--font-s-7: 5.96rem;
 		--font-s-8: 7.451rem;
+		--poster-content-w: 58vh;
 	}
 
 	.logo-img {
@@ -939,6 +946,10 @@ body {
 		right: 2rem;
 	}
 
+	.projects-content {
+		overflow-y: scroll;
+	}
+
 	.breadcrumb-img {
 		width: 7rem;
 	}
@@ -957,6 +968,14 @@ body {
 		transform: translate(3%, 0%);
 		font-weight: 300;
 		bottom: 0;
+	}
+	.projects-clicked .poster-wide {
+		flex-direction: column;
+		gap: 4rem;
+		width: var(--poster-content-w);
+		height: fit-content;
+
+		z-index: 99;
 	}
 	.about-content {
 		width: 85vw;

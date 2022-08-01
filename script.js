@@ -27,6 +27,15 @@ const posters = [
 		title: 'Quest of Heroes  (Original Animated Series)',
 		subImgs: [],
 	},
+	{
+		src: './img/niles-norman-poster.jpg',
+		text: 'A return to classic 2D Animation, Niles Norman ‘s Traveling Adventures, brings back the feel of Saturday morning cartoons of the 90s with the quality and artisanship of animation classic films, while inspiring families with amazing adventures, educational  content, and edifying values in a light-hearted family entertainment show. ',
+		title: 'Niles Norman’s Traveling Adventures',
+		subImgs: ['./img/mountains-concept.jpg'],
+		textAdditional:
+			'Niles Norman’s Traveling Adventures  follows the traveling adventures of Niles Norman and his production team as they capture the wildlife, animals, sights, and experiences of amazing locations all over the world! Often finding themselves with an opportunity to help local people or wildlife, the Niles Norman team films their show within the show, providing a funny look into documentary and television production as they go about their adventure.',
+		imgAdditional: ['./img/brenda-concept-sketch.jpg'],
+	},
 ];
 // Selectors
 const navLinks = document.querySelector('.nav-links');
@@ -104,8 +113,20 @@ function offlight(el) {
 	el.classList.remove('link-highlight');
 }
 //SLIDER
-let postersOverflow = false;
-let numberOfPosters = 3;
+let postersOverflow = true;
+let numberOfVisiblePosters = 1;
+
+const checkScreenSize = function () {
+	if (window.matchMedia('(max-width: 68em)').matches) {
+		numberOfVisiblePosters = 1;
+	} else {
+		numberOfVisiblePosters = 3;
+	}
+
+	if (posters.length > numberOfVisiblePosters) {
+		postersOverflow = true;
+	} else postersOverflow == false;
+};
 
 // Generate Poster Content
 const projectsImgs = function (imgs) {
@@ -167,7 +188,7 @@ let currentImg = 0;
 
 const movePosters = function (id) {
 	projectsContent.style.transform = `translateX(${
-		id * (-100 / numberOfPosters)
+		id * (-100 / numberOfVisiblePosters)
 	}%)`;
 };
 
@@ -198,6 +219,7 @@ const togglePosters = function (clicked) {
 };
 
 // INIT
+checkScreenSize();
 posters.forEach((_, index) => {
 	createImg(index);
 });
