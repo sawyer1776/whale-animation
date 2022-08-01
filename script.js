@@ -47,6 +47,9 @@ const btnBack = document.querySelector('.btn-slider-back');
 const projectsContent = document.querySelector(
 	'.projects-content'
 );
+const projectsContentContainer = document.querySelector(
+	'.projects-content-container'
+);
 const aboutExpansionContent = document.querySelector(
 	'.about-expansion-content'
 );
@@ -192,6 +195,9 @@ const movePosters = function (id) {
 };
 const togglePosters = function (clicked) {
 	checkScreenSize();
+	//centers the poster in the view
+	console.log('scrolling to view');
+	projectsContentContainer.scrollIntoView(false);
 	//decide if opening or closing an element
 	//closing, reset
 	if (clicked.classList.contains('projects-clicked')) {
@@ -216,11 +222,6 @@ const togglePosters = function (clicked) {
 		}
 	}
 	clicked.classList.toggle('projects-clicked');
-
-	//centers the poster in the view
-	document
-		.querySelector('.projects-content')
-		.scrollIntoView(false);
 };
 
 // INIT
@@ -286,9 +287,11 @@ clickListen(
 	topClose
 );
 bottmomClose.addEventListener('click', () => {
-	document
-		.querySelector('.about-text')
-		.scrollIntoView(true);
+	document.querySelector('.about-text').scrollIntoView({
+		behavior: 'smooth',
+		block: 'start',
+		inline: 'nearest',
+	});
 });
 
 document
