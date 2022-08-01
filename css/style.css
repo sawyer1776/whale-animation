@@ -326,10 +326,13 @@ body {
 
 .projects-section {
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-	width: 100vw;
+	max-width: 100vw;
 	overflow-x: hidden;
-	margin-bottom: 8rem;
+	padding: 4rem 6rem;
 }
 
 .slider-btns {
@@ -361,17 +364,22 @@ body {
 	color: var(--color-primary-dark);
 	max-width: 100vw;
 }
-.projects-content {
+.projects-content-container {
+	background-color: rebeccapurple;
+	padding: 3vh;
+	max-width: 167vh;
 	display: flex;
-	padding-bottom: 5rem;
-	margin: 0 auto;
-	gap: 7vh;
-
 	justify-content: flex-start;
-	padding-left: 3.5vh;
+	overflow-x: scroll;
+}
+.projects-content {
+	background-color: red;
+	display: flex;
+	padding: 0;
+	margin: 0;
+	gap: 7vh;
 	list-style: none;
 	position: relative;
-
 	transition: all ease-in-out 800ms;
 	transform: translateX(0);
 }
@@ -383,6 +391,10 @@ body {
 
 	transition: all 250ms;
 }
+
+/* .projects-poster:first-child {
+	margin-left: 3vh;
+} */
 
 .poster-img:active,
 .poster-img:hover {
@@ -401,7 +413,7 @@ body {
 	flex-direction: column;
 	padding: 10rem;
 	color: var(--wht);
-	overflow-y: scroll;
+	/* overflow-y: scroll; */
 	position: relative;
 }
 
@@ -1000,6 +1012,11 @@ body {
 
 	.photo-2 {
 		animation: fadeinout 12s infinite;
+	}
+
+	.photo-2.lock {
+		animation: none;
+		opacity: 100%;
 	}
 
 	.create-photo {

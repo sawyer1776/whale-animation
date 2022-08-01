@@ -1,110 +1,4 @@
-const projectsContent = document.querySelector(
-	'.projects-content'
-);
-const createForm = document.querySelector('.create-form');
-const supporterForm = document.querySelector(
-	'.supporter-form'
-);
-const btnForward = document.querySelector(
-	'.btn-slider-forward'
-);
-const btnBack = document.querySelector('.btn-slider-back');
-const hamburgerClose = document.querySelector(
-	'.hamburger-close'
-);
-const hamburgerOpen = document.querySelector(
-	'.nav-hamburger'
-);
-const navLinks = document.querySelector('.nav-links');
-
-//Generic function for closing an element arg is the element to be closed
-const toggleElement = function (element) {
-	element.classList.toggle('closed');
-};
-const toggleMobile = function (element) {
-	element.classList.toggle('closed-mobile');
-};
-
-const breadcrumbMore = document.querySelector(
-	'.breadcrumb-more'
-);
-
-const photoContainer = document.querySelector(
-	'.photo-container'
-);
-const photoTwo = document.querySelector('.photo-2');
-setTimeout(() => {
-	breadcrumbMore.classList.remove('hide-crumb');
-}, 2000);
-
-const lockPhoto = function () {
-	photoTwo.classList.toggle('lock');
-};
-
-navLinks.addEventListener('click', () => {
-	setTimeout(() => {
-		toggleMobile(navLinks);
-	}, 950);
-});
-hamburgerOpen.addEventListener('click', () => {
-	toggleMobile(navLinks);
-	console.log('click');
-});
-
-photoContainer.addEventListener('click', lockPhoto);
-
-//function for scroll over
-function highlight(el) {
-	el.classList.add('link-highlight');
-}
-
-//function for removing scrollover
-function offlight(el) {
-	el.classList.remove('link-highlight');
-}
-//document.querySelector('nav-links').onmouseover = highlight;
-
-//OPEN and Close the About section
-document
-	.querySelector('.about-links')
-	.addEventListener('click', function (e) {
-		document
-			.querySelector('.about-expansion-content')
-			.classList.toggle('closed');
-		document
-			.querySelector('.close')
-			.classList.toggle('closed');
-		document
-			.querySelector('.learn-more')
-			.classList.toggle('closed');
-	});
-
-//Close it at the end
-document
-	.querySelector('.about-close-btn')
-	.addEventListener('click', function (e) {
-		document
-			.querySelector('.about-expansion-content')
-			.classList.toggle('closed');
-		document
-			.querySelector('.close')
-			.classList.toggle('closed');
-		document
-			.querySelector('.learn-more')
-			.classList.toggle('closed');
-	});
-
-/////Move back to the top when closing the about section
-document
-	.querySelector('.about-close-btn')
-	.addEventListener('click', () => {
-		console.log('clikcing');
-		document
-			.querySelector('.about-text')
-			.scrollIntoView(true);
-	});
-
-//make an array of objects with given info
+//POSTER CONTENT
 const posters = [
 	{
 		src: './img/niles-norman-poster.jpg',
@@ -122,14 +16,98 @@ const posters = [
 		subImgs: ['./img/sealpup-sketch.jpg'],
 	},
 	{
+		src: './img/SplashPoster.jpg',
+		text: 'In the harsh but beautiful environment of the Arctic, a young Harp Seal pup must find his courage to overcome his fear of the water he was born to play in. ',
+		title: 'Splash! (2D Animated Short Film)',
+		subImgs: ['./img/sealpup-sketch.jpg'],
+	},
+	{
 		src: './img/quest-of-heros-poster.jpg',
 		text: 'A party of friends playing an online game inside of  the  Land of Kallyria, a fictional multiplayer online video game,  must together  face the challenges of  dangerous creatures, treacherous elements, former friends, and restore the land of Kallyria from the evil Queen. The Danger, Magic, Impossible Quests, Mythical Creatures,and in-game challenges they face  bring them closer together as friends and help them face their real life challenges outside in the real world.  ',
 		title: 'Quest of Heroes  (Original Animated Series)',
 		subImgs: [],
 	},
 ];
+// Selectors
+const navLinks = document.querySelector('.nav-links');
+const sliderBtns = document.querySelector('.slider-btns');
+const btnForward = document.querySelector(
+	'.btn-slider-forward'
+);
+const btnBack = document.querySelector('.btn-slider-back');
+const projectsContent = document.querySelector(
+	'.projects-content'
+);
+const aboutExpansionContent = document.querySelector(
+	'.about-expansion-content'
+);
+const topClose = document.querySelector('.close');
+const bottmomClose = document.querySelector(
+	'.about-close-btn'
+);
+const learnMore = document.querySelector('.learn-more');
+const createForm = document.querySelector('.create-form');
+const supporterForm = document.querySelector(
+	'.supporter-form'
+);
 
-//Creates an img html markup for each image in the list
+// Generic Functions
+const toggleElement = function (
+	element,
+	elementTwo,
+	elementThree
+) {
+	if (element) {
+		element.classList.toggle('closed');
+	}
+	if (elementTwo) {
+		elementTwo.classList.toggle('closed');
+	}
+	if (elementThree) {
+		elementThree.classList.toggle('closed');
+	}
+};
+const toggleMobile = function (element) {
+	element.classList.toggle('closed-mobile');
+};
+
+const clickListen = function (
+	element,
+	func,
+	argument,
+	argumentTwo,
+	argumentThree
+) {
+	element.addEventListener('click', () => {
+		func(argument, argumentTwo, argumentThree);
+	});
+};
+
+//Specific Functions
+setTimeout(() => {
+	document
+		.querySelector('.breadcrumb-more')
+		.classList.remove('hide-crumb');
+}, 2000);
+
+const lockPhoto = function () {
+	document
+		.querySelector('.photo-2')
+		.classList.toggle('lock');
+};
+
+//Skewed hover background
+function highlight(el) {
+	el.classList.add('link-highlight');
+}
+function offlight(el) {
+	el.classList.remove('link-highlight');
+}
+//SLIDER
+let postersOverflow = false;
+let numberOfPosters = 3;
+
+// Generate Poster Content
 const projectsImgs = function (imgs) {
 	let markup = ``;
 	imgs.forEach((img) => {
@@ -141,7 +119,6 @@ const projectsImgs = function (imgs) {
 	});
 	return markup;
 };
-
 const createImg = function (index) {
 	const newItem = `<li class="projects-poster" data-id=${index}>
 				<div class="poster-wide "> 
@@ -182,24 +159,15 @@ const createImg = function (index) {
 					</aside>
 				</div>
 			</li> `;
-	//Add the image in
-
-	document
-		.querySelector('.projects-content')
-		.insertAdjacentHTML('beforeend', newItem);
+	projectsContent.insertAdjacentHTML('beforeend', newItem);
 };
-
-//Initalize posters
-posters.forEach((poster, index) => {
-	createImg(index);
-});
 
 //Same as data ID of the farthest left image in view 0 based
 let currentImg = 0;
 
 const movePosters = function (id) {
 	projectsContent.style.transform = `translateX(${
-		id * -33.333
+		id * (-100 / numberOfPosters)
 	}%)`;
 };
 
@@ -207,15 +175,14 @@ const togglePosters = function (clicked) {
 	//decide if opening or closing an element
 	//closing, reset
 	if (clicked.classList.contains('projects-clicked')) {
-		if (posters.length > 3) {
-			document
-				.querySelector('.slider-btns')
-				.classList.remove('closed');
+		if (postersOverflow) {
+			console.log('yes');
+			sliderBtns.classList.remove('closed');
 		}
 		movePosters(+currentImg);
 	} else {
 		//opening, move to the data-id position
-		if (posters.length > 3) {
+		if (postersOverflow) {
 			document
 				.querySelector('.slider-btns')
 				.classList.add('closed');
@@ -230,6 +197,11 @@ const togglePosters = function (clicked) {
 		.scrollIntoView(false);
 };
 
+// INIT
+posters.forEach((_, index) => {
+	createImg(index);
+});
+
 const posterImgs = document.querySelectorAll('.poster-img');
 //add an event listener to each of the posters
 posterImgs.forEach((poster) => {
@@ -239,17 +211,9 @@ posterImgs.forEach((poster) => {
 	});
 });
 
-document
-	.querySelectorAll('.poster-close')
-	.forEach((element) => {
-		element.addEventListener('click', function (e) {
-			togglePosters(e.target.closest('.projects-poster'));
-		});
-	});
-
 ///Listen for clicks on the slider arrows
 ////Only Add if Btns are present(4 or more posters)
-if (posters.length > 3) {
+if (postersOverflow) {
 	btnForward.addEventListener('click', function () {
 		if (currentImg < posters.length - 3) {
 			currentImg++;
@@ -265,40 +229,78 @@ if (posters.length > 3) {
 		}
 	});
 } else {
-	document.querySelector('.slider-btns').remove();
+	console.log(sliderBtns.classList);
+	toggleElement(sliderBtns);
 }
 
-const clickListener = function (clickEl, closeEl) {
-	clickEl.addEventListener('click', function () {
-		toggleElement(closeEl);
+//LISTENERS
+clickListen(navLinks, toggleMobile, navLinks);
+clickListen(
+	document.querySelector('.nav-hamburger'),
+	toggleMobile,
+	navLinks
+);
+clickListen(
+	document.querySelector('.photo-container'),
+	lockPhoto
+);
+clickListen(
+	document.querySelector('.about-links'),
+	toggleElement,
+	aboutExpansionContent,
+	learnMore,
+	topClose
+);
+clickListen(
+	bottmomClose,
+	toggleElement,
+	aboutExpansionContent,
+	learnMore,
+	topClose
+);
+bottmomClose.addEventListener('click', () => {
+	document
+		.querySelector('.about-text')
+		.scrollIntoView(true);
+});
+
+document
+	.querySelectorAll('.poster-close')
+	.forEach((element) => {
+		element.addEventListener('click', function (e) {
+			togglePosters(e.target.closest('.projects-poster'));
+		});
 	});
-};
 
 //OPEN and CLOSE create with us contact form
-clickListener(
+clickListen(
 	document.querySelector('.create-btn'),
+	toggleElement,
 	createForm
 );
-clickListener(
+clickListen(
 	document.querySelector('.create-with-us'),
+	toggleElement,
 	createForm
 );
-clickListener(
+clickListen(
 	document.querySelector('.create-close'),
+	toggleElement,
 	createForm
 );
 
-//OPEN and CLOSE supporter contact form
-
-clickListener(
+clickListen(
 	document.querySelector('.supporter-btn'),
+	toggleElement,
 	supporterForm
 );
-clickListener(
+clickListen(
 	document.querySelector('.become-a-supporter'),
+	toggleElement,
 	supporterForm
 );
-clickListener(
+clickListen(
 	document.querySelector('.supporter-close'),
+	toggleElement,
 	supporterForm
 );
