@@ -115,6 +115,7 @@ function offlight(el) {
 //SLIDER
 let postersOverflow = true;
 let numberOfVisiblePosters = 1;
+let currentImg = 0;
 
 const checkScreenSize = function () {
 	if (window.matchMedia('(max-width: 68em)').matches) {
@@ -127,7 +128,6 @@ const checkScreenSize = function () {
 		postersOverflow = true;
 	} else postersOverflow == false;
 };
-
 // Generate Poster Content
 const projectsImgs = function (imgs) {
 	let markup = ``;
@@ -182,33 +182,38 @@ const createImg = function (index) {
 			</li> `;
 	projectsContent.insertAdjacentHTML('beforeend', newItem);
 };
-
-//Same as data ID of the farthest left image in view 0 based
-let currentImg = 0;
-
 const movePosters = function (id) {
-	projectsContent.style.transform = `translateX(${
-		id * (-100 / numberOfVisiblePosters)
-	}%)`;
+	checkScreenSize();
+	if (numberOfVisiblePosters === 3) {
+		projectsContent.style.transform = `translateX(${
+			id * (-100 / numberOfVisiblePosters)
+		}%)`;
+	}
 };
-
 const togglePosters = function (clicked) {
+	checkScreenSize();
 	//decide if opening or closing an element
 	//closing, reset
 	if (clicked.classList.contains('projects-clicked')) {
+		movePosters(+currentImg);
 		if (postersOverflow) {
-			console.log('yes');
 			sliderBtns.classList.remove('closed');
 		}
-		movePosters(+currentImg);
+		if (numberOfVisiblePosters === 1) {
+			projectsContent.style.overflowX = 'scroll';
+		}
 	} else {
 		//opening, move to the data-id position
+		movePosters(clicked.dataset.id);
 		if (postersOverflow) {
 			document
 				.querySelector('.slider-btns')
 				.classList.add('closed');
 		}
-		movePosters(clicked.dataset.id);
+		if (numberOfVisiblePosters === 1) {
+			console.log('kill overflow');
+			projectsContent.style.overflowX = 'hidden';
+		}
 	}
 	clicked.classList.toggle('projects-clicked');
 

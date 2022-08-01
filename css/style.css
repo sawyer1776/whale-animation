@@ -951,6 +951,9 @@ body {
 		flex: none;
 		scroll-snap-type: x mandatory;
 	}
+	/* .no-scroll {
+		overflow-x: hidden;
+	} */
 
 	.projects-poster {
 		scroll-snap-align: center;
