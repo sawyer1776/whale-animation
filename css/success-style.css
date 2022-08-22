@@ -1,3 +1,37 @@
-.body {
-	background-color: red;
+body {
+	display: flex;
+	align-items: center;
+
+	justify-content: center;
+	background-image: linear-gradient(
+			to bottom,
+			#04062e00,
+			#04062e1e,
+			#04062e86,
+			#04062e
+		),
+		url('../img/hero-bg.jpg');
+
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+}
+
+.heading {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: var(--font-s-8);
+	letter-spacing: 0.25rem;
+	margin-bottom: 8rem;
+	background-color: #04062eaf;
+	padding: 2rem;
+	height: fit-content;
+}
+
+h1 {
+	max-width: 60vw;
+}
+
+p {
+	max-width: 60vw;
 }
