@@ -15,26 +15,12 @@ const posters = [
 		title: 'Splash! (2D Animated Short Film)',
 		subImgs: ['./img/sealpup-sketch.jpg'],
 	},
-	{
-		src: './img/SplashPoster.jpg',
-		text: 'In the harsh but beautiful environment of the Arctic, a young Harp Seal pup must find his courage to overcome his fear of the water he was born to play in. ',
-		title: 'Splash! (2D Animated Short Film)',
-		subImgs: ['./img/sealpup-sketch.jpg'],
-	},
+
 	{
 		src: './img/quest-of-heros-poster.jpg',
 		text: 'A party of friends playing an online game inside of  the  Land of Kallyria, a fictional multiplayer online video game,  must together  face the challenges of  dangerous creatures, treacherous elements, former friends, and restore the land of Kallyria from the evil Queen. The Danger, Magic, Impossible Quests, Mythical Creatures,and in-game challenges they face  bring them closer together as friends and help them face their real life challenges outside in the real world.  ',
 		title: 'Quest of Heroes  (Original Animated Series)',
 		subImgs: [],
-	},
-	{
-		src: './img/niles-norman-poster.jpg',
-		text: 'A return to classic 2D Animation, Niles Norman ‘s Traveling Adventures, brings back the feel of Saturday morning cartoons of the 90s with the quality and artisanship of animation classic films, while inspiring families with amazing adventures, educational  content, and edifying values in a light-hearted family entertainment show. ',
-		title: 'Niles Norman’s Traveling Adventures',
-		subImgs: ['./img/mountains-concept.jpg'],
-		textAdditional:
-			'Niles Norman’s Traveling Adventures  follows the traveling adventures of Niles Norman and his production team as they capture the wildlife, animals, sights, and experiences of amazing locations all over the world! Often finding themselves with an opportunity to help local people or wildlife, the Niles Norman team films their show within the show, providing a funny look into documentary and television production as they go about their adventure.',
-		imgAdditional: ['./img/brenda-concept-sketch.jpg'],
 	},
 ];
 // Selectors
@@ -129,6 +115,7 @@ const checkScreenSize = function () {
 
 	if (posters.length > numberOfVisiblePosters) {
 		postersOverflow = true;
+		sliderBtns.remove();
 	} else postersOverflow == false;
 };
 // Generate Poster Content
