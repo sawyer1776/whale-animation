@@ -115,8 +115,10 @@ const checkScreenSize = function () {
 
 	if (posters.length > numberOfVisiblePosters) {
 		postersOverflow = true;
-		sliderBtns.remove();
-	} else postersOverflow == false;
+	} else {
+		postersOverflow = false;
+		sliderBtns.classList.add('hidden');
+	}
 };
 // Generate Poster Content
 const projectsImgs = function (imgs) {

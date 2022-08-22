@@ -246,6 +246,7 @@ body {
 
 .section {
 	margin-bottom: 18rem;
+	overflow-x: hidden;
 }
 
 /* ---------- HERO SECTION -------------- */
