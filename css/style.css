@@ -245,6 +245,7 @@ body {
 }
 
 .section {
+	width: 101vw;
 	margin-bottom: 18rem;
 	overflow-x: hidden;
 }
