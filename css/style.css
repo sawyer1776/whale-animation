@@ -1196,11 +1196,6 @@ body {
 		z-index: 3;
 	}
 
-	.btn-link {
-		color: red;
-		text-decoration: none;
-	}
-
 	.breadcrumb-more {
 		font-size: var(--font-s-1);
 	}
@@ -1255,6 +1250,7 @@ body {
 
 	.supporter-section {
 		margin: 0 auto;
+		padding: 1rem;
 	}
 
 	.footer-logo {

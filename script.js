@@ -7,7 +7,7 @@ const posters = [
 		subImgs: ['./img/mountains-concept.jpg'],
 		textAdditional:
 			'Niles Norman’s Traveling Adventures  follows the traveling adventures of Niles Norman and his production team as they capture the wildlife, animals, sights, and experiences of amazing locations all over the world! Often finding themselves with an opportunity to help local people or wildlife, the Niles Norman team films their show within the show, providing a funny look into documentary and television production as they go about their adventure.',
-		imgAdditional: ['./img/brenda-concept-sketch.jpg'],
+		// imgAdditional: ['./img/brenda-concept-sketch.jpg'],
 	},
 	{
 		src: './img/SplashPoster.jpg',
