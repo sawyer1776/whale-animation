@@ -272,6 +272,7 @@ body {
 
 .hero-logo {
 	height: 60vh;
+	width: 72vh;
 }
 
 .hero-post-heading {
@@ -904,6 +905,7 @@ body {
 
 	.hero-logo {
 		height: 53vh;
+		width: 63vh;
 	}
 	:root {
 		--font-s-1: 1.563rem;
@@ -1204,7 +1206,7 @@ body {
 	}
 	.hero-logo {
 		width: 88vw;
-		height: fit-content;
+		height: 74vw;
 	}
 
 	.about-content {
