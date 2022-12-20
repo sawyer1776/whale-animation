@@ -19,8 +19,8 @@
 		rel="stylesheet">
 </head>
 
-<body>
-	<nav class="navbar max-width">
+<body class="body body-scroll-hidden">
+	<nav class="navbar max-width hide-navbar">
 		<a class="logo link" href="#"> <img class="logo-img" src="img/logo-horizontal.webp" alt="Logo linking to home page">
 		</a>
 		<ion-icon class="nav-hamburger" name="menu-sharp"></ion-icon>
@@ -46,7 +46,10 @@
 	</nav>
 	<section class="section hero-section">
 		<div class="hero-content">
-			<img class="hero-logo" src="img/hero-logo.png" alt="logo of a whale against a starry sky">
+			<video autoplay muted>
+				<source class="hero-logo" src="img/motion_logo.mp4" alt="logo of a whale against a starry sky">
+			</video>
+			<!-- <img class="hero-logo" src="img/hero-logo.png" alt="logo of a whale against a starry sky"> -->
 		</div>
 		<a href="#projects" class="breadcrumb-more hide-crumb">
 			<img class="breadcrumb-img " src="./img/bee-transparent-1.png" alt="A bumblebee leading you further in">

@@ -15,6 +15,11 @@ body {
 	line-height: 1;
 	font-weight: 400;
 	color: #2c2c2c;
+	position: relative;
+}
+
+.body-scroll-hidden {
+	overflow-y: hidden;
 }
 
 :root {
@@ -192,9 +197,17 @@ body {
 	background-color: var(--color-primary-dark);
 	color: var(--wht);
 	position: fixed;
+	top: 0;
+	opacity: 100%;
+
 	box-shadow: 0 0.5rem 1rem 0.75rem rgba(0, 0, 0, 0.275);
 	z-index: 100;
 	height: fit-content;
+	transition: opacity 1000ms;
+}
+
+.hide-navbar {
+	opacity: 0;
 }
 
 .logo-img {
@@ -252,22 +265,38 @@ body {
 
 /* ---------- HERO SECTION -------------- */
 
+.hero-section {
+	/* margin-top: 100px; */
+	overflow-x: hidden;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
 .hero-content {
-	background-image: linear-gradient(
+	/* background-image: linear-gradient(
 			to bottom,
 			#04062e00,
 			#04062e1e,
 			#04062e86,
 			#04062e
 		),
-		url('../img/hero-bg.jpg');
+		url('../img/hero-bg.jpg'); */
 
-	background-size: cover;
+	/* background-size: cover; */
+	background-color: #050827;
 	width: 100vw;
+	/* height: calc(100vh - 120px); */
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+video {
+	height: 100%;
 }
 
 .hero-logo {
@@ -282,7 +311,7 @@ body {
 .breadcrumb-more {
 	color: var(--wht);
 	position: absolute;
-	bottom: 0rem;
+	bottom: 5rem;
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
@@ -901,6 +930,9 @@ body {
 @media (max-width: 68em) {
 	.closed-mobile {
 		display: none;
+	}
+	video {
+		height: 40%;
 	}
 
 	.hero-logo {

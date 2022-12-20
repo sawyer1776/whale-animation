@@ -47,7 +47,6 @@ const createForm = document.querySelector('.create-form');
 const supporterForm = document.querySelector(
 	'.supporter-form'
 );
-
 // Generic Functions
 const toggleElement = function (
 	element,
@@ -81,11 +80,43 @@ const clickListen = function (
 };
 
 //Specific Functions
+const showScroll = function () {
+	document
+		.querySelector('.body')
+		.classList.remove('body-scroll-hidden');
+};
+const showNav = function () {
+	document
+		.querySelector('.navbar')
+		.classList.remove('hide-navbar');
+};
+
 setTimeout(() => {
 	document
 		.querySelector('.breadcrumb-more')
 		.classList.remove('hide-crumb');
-}, 2000);
+}, 11500);
+setTimeout(() => {
+	showNav();
+}, 9500);
+setTimeout(() => {
+	showScroll();
+}, 9500);
+
+document
+	.querySelector('.body')
+	.addEventListener('wheel', (e) => {
+		showScroll();
+		showNav();
+	});
+document
+	.querySelector('.body')
+	.addEventListener('touchstart', (e) => {
+		showScroll();
+		showNav();
+	});
+clickListen(document.querySelector('.body'), showScroll);
+clickListen(document.querySelector('.body'), showNav);
 
 const lockPhoto = function () {
 	document
