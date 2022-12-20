@@ -1,13 +1,12 @@
 //POSTER CONTENT
 const posters = [
 	{
-		src: './img/niles-norman-poster.jpg',
-		text: 'A return to classic 2D Animation, Niles Norman ‘s Traveling Adventures, brings back the feel of Saturday morning cartoons of the 90s with the quality and artisanship of animation classic films, while inspiring families with amazing adventures, educational  content, and edifying values in a light-hearted family entertainment show. ',
-		title: 'Niles Norman’s Traveling Adventures',
+		src: './img/adventures_poster_02.jpg',
+		text: `A return to classic 2D Animation, Niles Norman's Traveling Adventures, brings back the feel of Saturday morning cartoons of the 90s with the quality and artisanship of animation classic films, while inspiring families with amazing adventures, educational  content, and edifying values in a light-hearted family entertainment show. `,
+		title: `Niles Norman's Traveling Adventures`,
 		subImgs: ['./img/mountains-concept.jpg'],
-		textAdditional:
-			'Niles Norman’s Traveling Adventures  follows the traveling adventures of Niles Norman and his production team as they capture the wildlife, animals, sights, and experiences of amazing locations all over the world! Often finding themselves with an opportunity to help local people or wildlife, the Niles Norman team films their show within the show, providing a funny look into documentary and television production as they go about their adventure.',
-		// imgAdditional: ['./img/brenda-concept-sketch.jpg'],
+		textAdditional: `Niles Norman's Traveling Adventures  follows the traveling adventures of Niles Norman and his production team as they capture the wildlife, animals, sights, and experiences of amazing locations all over the world! Often finding themselves with an opportunity to help local people or wildlife, the Niles Norman team films their show within the show, providing a funny look into documentary and television production as they go about their adventure.`,
+		imgAdditional: ['./img/wave.jpg'],
 	},
 	{
 		src: './img/SplashPoster.jpg',
@@ -313,11 +312,13 @@ clickListen(
 	toggleElement,
 	supporterForm
 );
-clickListen(
-	document.querySelector('.become-a-supporter'),
-	toggleElement,
-	supporterForm
-);
+
+//CHANGED TO LINK TO https://www.patreon.com/WhaleAnimationStudios
+// clickListen(
+// 	document.querySelector('.become-a-supporter'),
+// 	toggleElement,
+// 	supporterForm
+// );
 clickListen(
 	document.querySelector('.supporter-close'),
 	toggleElement,
