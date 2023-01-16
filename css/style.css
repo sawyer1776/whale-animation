@@ -286,7 +286,7 @@ body {
 		url('../img/hero-bg.jpg'); */
 
 	/* background-size: cover; */
-	background-color: #050827;
+	background-color: #010213;
 	width: 100vw;
 	/* height: calc(100vh - 120px); */
 	height: 100vh;
@@ -297,6 +297,7 @@ body {
 
 video {
 	height: 100%;
+	width: 100%;
 }
 
 .hero-logo {
@@ -930,9 +931,6 @@ video {
 @media (max-width: 68em) {
 	.closed-mobile {
 		display: none;
-	}
-	video {
-		height: 40%;
 	}
 
 	.hero-logo {

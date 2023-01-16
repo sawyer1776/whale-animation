@@ -24,6 +24,8 @@ const posters = [
 ];
 // Selectors
 const navLinks = document.querySelector('.nav-links');
+const videoLogo = document.querySelector('.video');
+const heroContent = document.querySelector('.hero-content');
 const sliderBtns = document.querySelector('.slider-btns');
 const btnForward = document.querySelector(
 	'.btn-slider-forward'
@@ -80,6 +82,20 @@ const clickListen = function (
 };
 
 //Specific Functions
+const switchVideo = function () {
+	videoLogo.remove();
+
+	const replacementVideo = `<video autoplay muted class="video">
+				<source class="hero-logo" src="img/motion-logo-desktop.mp4"
+					alt="logo of a whale against a starry sky">
+			</video>
+			`;
+	heroContent.insertAdjacentHTML(
+		'beforeend',
+		replacementVideo
+	);
+};
+
 const showScroll = function () {
 	document
 		.querySelector('.body')
@@ -141,6 +157,7 @@ const checkScreenSize = function () {
 		numberOfVisiblePosters = 1;
 	} else {
 		numberOfVisiblePosters = 3;
+		switchVideo();
 	}
 
 	if (posters.length > numberOfVisiblePosters) {
