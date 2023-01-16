@@ -946,8 +946,8 @@ video {
 		background-size: cover;
 		/* background-color: #020317; */
 		width: 100vw;
-		height: calc(100vh - 120px);
-		/* height: 100vh; */
+		/* height: calc(100vh - 120px); */
+		height: 100vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
