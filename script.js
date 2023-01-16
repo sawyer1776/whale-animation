@@ -24,7 +24,7 @@ const posters = [
 ];
 // Selectors
 const navLinks = document.querySelector('.nav-links');
-const videoLogo = document.querySelector('.video');
+const staticLogo = document.querySelector('.hero-logo');
 const heroContent = document.querySelector('.hero-content');
 const sliderBtns = document.querySelector('.slider-btns');
 const btnForward = document.querySelector(
@@ -83,7 +83,7 @@ const clickListen = function (
 
 //Specific Functions
 const switchVideo = function () {
-	videoLogo.remove();
+	staticLogo.remove();
 
 	const replacementVideo = `<video autoplay muted class="video">
 				<source class="hero-logo" src="img/motion-logo-desktop.mp4"

@@ -283,10 +283,10 @@ body {
 			#04062e86,
 			#04062e
 		),
-		url('../img/hero-bg.jpg'); */
+		url('../img/hero-bg.jpg');
 
-	/* background-size: cover; */
-	background-color: #010213;
+	background-size: cover; */
+	background-color: #020317;
 	width: 100vw;
 	/* height: calc(100vh - 120px); */
 	height: 100vh;
@@ -931,6 +931,26 @@ video {
 @media (max-width: 68em) {
 	.closed-mobile {
 		display: none;
+	}
+
+	.hero-content {
+		background-image: linear-gradient(
+				to bottom,
+				#04062e00,
+				#04062e1e,
+				#04062e86,
+				#04062e
+			),
+			url('../img/hero-bg.jpg');
+
+		background-size: cover;
+		/* background-color: #020317; */
+		width: 100vw;
+		height: calc(100vh - 120px);
+		/* height: 100vh; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.hero-logo {
