@@ -1,6 +1,12 @@
 //POSTER CONTENT
 const posters = [
 	{
+		src: './img/tiki-poster.jpg',
+		text: 'Tiki Tiki Feud is a film about two rival Tikis who come to life at night and compete to find ways of attracting the attention of tourists during the day. During their  rivalry they ultimately discover the importance of friendship and teamwork. ',
+		title: 'Tiki Tiki Fued',
+		subImgs: [],
+	},
+	{
 		src: './img/adventures_poster_02.jpg',
 		text: `A return to classic 2D Animation, The Traveling Adventures of Al Mennie, brings back the feel of Saturday morning cartoons of the 90s with the quality and artisanship of animation classic films, while inspiring families with amazing adventures, educational  content, and edifying values in a light-hearted family entertainment show. `,
 		title: `The Traveling Adventures of Al Mennie`,
@@ -13,12 +19,6 @@ const posters = [
 		text: 'In the harsh but beautiful environment of the Arctic, a young Harp Seal pup must find his courage to overcome his fear of the water he was born to play in. ',
 		title: 'Splash! (2D Animated Short Film)',
 		subImgs: ['./img/sealpup-sketch.jpg'],
-	},
-	{
-		src: './img/tiki-poster.jpg',
-		text: 'Tiki Tiki Feud is a film about two rival Tikis who come to life at night and compete to find ways of attracting the attention of tourists during the day. During their  rivalry they ultimately discover the importance of friendship and teamwork. ',
-		title: 'Tiki Tiki Fued',
-		subImgs: [],
 	},
 
 	{
