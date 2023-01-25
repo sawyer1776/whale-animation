@@ -14,6 +14,12 @@ const posters = [
 		title: 'Splash! (2D Animated Short Film)',
 		subImgs: ['./img/sealpup-sketch.jpg'],
 	},
+	{
+		src: './img/tiki-poster.jpg',
+		text: 'Tiki Tiki Feud is a film about two rival Tikis who come to life at night and compete to find ways of attracting the attention of tourists during the day. During their  rivalry they ultimately discover the importance of friendship and teamwork. ',
+		title: 'Tiki Tiki Fued',
+		subImgs: [],
+	},
 
 	{
 		src: './img/quest-of-heros-poster.jpg',
