@@ -14,9 +14,12 @@ const posters = [
 	},
 	{
 		src: './img/little-bright-stars-poster.jpg',
-		text: `Little Bright Stars is  a fun, musically educational animated show for early child development. With the goal  to educate young minds to reach their full potential with learning through songs, images, colors and phonics Little Bright Stars Inspires learning , growing, searching, wonder, knowledge, and fun`,
+		text: `Little Bright Stars is  a fun, musically educational animated show for early child development. `,
 		title: `Little Bright Stars`,
-		subImgs: [],
+		subImgs: ['./img/little-bright-stars-img-3.jpg'],
+		textAdditional: `With the goal  to educate young minds to reach their full potential with learning through songs, images, colors and phonics Little Bright Stars Inspires learning , growing, searching, wonder, knowledge, and fun`,
+		imgAdditional: ['./img/little-bright-stars-img-2.jpg'],
+		imgAdditionalTwo: ['./img/little-bright-stars-img.jpg'],
 	},
 	{
 		src: './img/adventures_poster_02.jpg',
@@ -222,6 +225,15 @@ const createImg = function (index) {
 								posters[index].imgAdditional
 									? projectsImgs(
 											posters[index].imgAdditional
+									  )
+									: ''
+							}			
+						</div>
+						<div class="project-imgs">
+							${
+								posters[index].imgAdditionalTwo
+									? projectsImgs(
+											posters[index].imgAdditionalTwo
 									  )
 									: ''
 							}			
