@@ -7,18 +7,24 @@ const posters = [
 		subImgs: [],
 	},
 	{
+		src: './img/SplashPoster.jpg',
+		text: 'In the harsh but beautiful environment of the Arctic, a young Harp Seal pup must find his courage to overcome his fear of the water he was born to play in. ',
+		title: 'Splash! (2D Animated Short Film)',
+		subImgs: ['./img/sealpup-sketch.jpg'],
+	},
+	{
+		src: './img/little-bright-stars-poster.jpg',
+		text: `Little Bright Stars is  a fun, musically educational animated show for early child development. With the goal  to educate young minds to reach their full potential with learning through songs, images, colors and phonics Little Bright Stars Inspires learning , growing, searching, wonder, knowledge, and fun`,
+		title: `Little Bright Stars`,
+		subImgs: [],
+	},
+	{
 		src: './img/adventures_poster_02.jpg',
 		text: `A return to classic 2D Animation, The Traveling Adventures of Al Mennie, brings back the feel of Saturday morning cartoons of the 90s with the quality and artisanship of animation classic films, while inspiring families with amazing adventures, educational  content, and edifying values in a light-hearted family entertainment show. `,
 		title: `The Traveling Adventures of Al Mennie`,
 		subImgs: ['./img/mountains-concept.jpg'],
 		textAdditional: `The Traveling Adventures of Al Mennie  follows the traveling adventures of Al Mennie and his production team as they capture the wildlife, animals, sights, and experiences of amazing locations all over the world! Often finding themselves with an opportunity to help local people or wildlife, the Al Mennie team films their show within the show, providing a funny look into documentary and television production as they go about their adventure.`,
 		imgAdditional: ['./img/wave.jpg'],
-	},
-	{
-		src: './img/SplashPoster.jpg',
-		text: 'In the harsh but beautiful environment of the Arctic, a young Harp Seal pup must find his courage to overcome his fear of the water he was born to play in. ',
-		title: 'Splash! (2D Animated Short Film)',
-		subImgs: ['./img/sealpup-sketch.jpg'],
 	},
 
 	{
