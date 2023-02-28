@@ -575,6 +575,10 @@ video {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.about-video {
+	width: 75vw;
+	margin: 0 auto;
+}
 
 .about-expansion-content {
 	width: 75vw;
@@ -624,6 +628,10 @@ video {
 
 .about-text-heading {
 	color: var(--wht);
+}
+
+.about-links {
+	margin-top: 2rem;
 }
 
 .about-link {
@@ -1052,6 +1060,9 @@ video {
 		width: 85vw;
 		height: 80vh;
 	}
+	.about-video {
+		width: 85vw;
+	}
 
 	.about-close-btn {
 		padding: 1rem 2rem;
@@ -1260,6 +1271,9 @@ video {
 	}
 
 	.about-content {
+		width: 100vw;
+	}
+	.about-video {
 		width: 100vw;
 	}
 	.about-subheading-pos {
