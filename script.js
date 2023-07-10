@@ -396,3 +396,7 @@ clickListen(
 	toggleElement,
 	supporterForm
 );
+
+let variable = [1, 2, 3, 4];
+variable.splice(0, 2);
+console.log(variable);
