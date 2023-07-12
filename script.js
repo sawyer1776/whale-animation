@@ -468,7 +468,7 @@ posters.forEach((poster, posterIndex) => {
 	let relatedPosters = ``;
 	if (posters.length > 1) {
 		console.log('posterIndex', posterIndex);
-		for (let index = 1; index < 6; index++) {
+		for (let index = 1; index < 7; index++) {
 			let relatedIndex = 0;
 			if (posterIndex + index < posters.length) {
 				relatedIndex = posterIndex + index;
@@ -489,13 +489,15 @@ posters.forEach((poster, posterIndex) => {
 	}
 	if (document.querySelector(`.insert-${poster.html}`)) {
 		let markup = `<section class="project-pg-info">
-      <div>
+      <div class="div-class">
         <img class="project-pg-poster shadow" src="${
 					poster.src
 				}" alt="Project hero image">
       </div>
       <aside class="project-pg-text">
-        <h1 class="subheading">${poster.title}</h1>
+        <h1 class="subheading project-pg-heading">${
+					poster.title
+				}</h1>
         <p class="project-pg-paragraph">${poster.text}</p>
         <div class="project-pg-box-container">
           <h2 class="box-title">Additional Information</h2>

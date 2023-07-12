@@ -386,6 +386,7 @@ video {
 	margin: 0;
 	gap: 5rem;
 	list-style: none;
+	margin-bottom: 5rem;
 }
 
 .poster-img {
@@ -1173,6 +1174,7 @@ video {
 		width: 100vw;
 
 		margin: 0 auto;
+		margin-bottom: 3rem;
 	}
 	.projects-content-container {
 		padding: 1vh;
