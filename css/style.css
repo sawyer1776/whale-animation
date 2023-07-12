@@ -379,12 +379,12 @@ video {
 
 .projects-content {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	padding: 0 auto;
-	width: 92vw;
+	width: 65vw;
 	max-width: 200rem;
 	margin: 0;
-	gap: 2vw;
+	gap: 5rem;
 	list-style: none;
 }
 
@@ -977,6 +977,16 @@ video {
 
 	.projects-poster {
 		scroll-snap-align: center;
+	}
+	.projects-content {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		padding: 0 auto;
+		width: 92vw;
+		max-width: 100rem;
+		margin: 0;
+		gap: 2vw;
+		list-style: none;
 	}
 
 	.breadcrumb-img {

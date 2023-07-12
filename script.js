@@ -134,17 +134,21 @@ const clickListen = function (
 
 //Specific Functions
 const switchVideo = function () {
-	staticLogo.remove();
+	if (staticLogo) {
+		staticLogo.remove();
+	}
 
 	const replacementVideo = `<video autoplay muted class="video">
 				<source class="hero-logo" src="img/motion-logo-desktop.mp4"
 					alt="logo of a whale against a starry sky">
 			</video>
 			`;
-	heroContent.insertAdjacentHTML(
-		'beforeend',
-		replacementVideo
-	);
+	if (heroContent) {
+		heroContent.insertAdjacentHTML(
+			'beforeend',
+			replacementVideo
+		);
+	}
 };
 
 const showScroll = function () {
@@ -333,7 +337,7 @@ const togglePosters = function (clicked) {
 };
 
 // INIT
-// checkScreenSize();
+checkScreenSize();
 posters.forEach((_, index) => {
 	createImg(index);
 });
