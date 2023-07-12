@@ -68,7 +68,7 @@ const posters = [
 		subImgs: ['../img/af-concept.png'],
 		format: 'Series',
 		genre: 'Drama, Adventure',
-		audience: 'Adults, Teens',
+		audience: 'Teens, Adults',
 		html: 'ather-fallen',
 	},
 ];

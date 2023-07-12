@@ -969,11 +969,11 @@ video {
 		right: 0rem;
 	}
 
-	.projects-content {
+	/* .projects-content {
 		overflow-x: scroll;
 		flex: none;
 		scroll-snap-type: x mandatory;
-	}
+	} */
 
 	.projects-poster {
 		scroll-snap-align: center;
@@ -983,10 +983,11 @@ video {
 		grid-template-columns: repeat(2, 1fr);
 		padding: 0 auto;
 		width: 90vw;
-		max-width: 90rem;
+		max-width: 95rem;
 		margin: 0;
 		gap: 2vw;
 		list-style: none;
+		height: fit-content;
 	}
 
 	.breadcrumb-img {
