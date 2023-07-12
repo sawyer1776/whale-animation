@@ -40,7 +40,7 @@ const posters = [
 		title: `The Traveling Adventures of Al Mennie`,
 		subImgs: [
 			'../img/mountains-concept.jpg',
-			'../img/wave.jpg',
+			'../img/wave_new_edit-1.jpg',
 		],
 		format: 'Series',
 		genre: 'Adventure, Travel, Wildlife',
@@ -53,8 +53,8 @@ const posters = [
 		text: 'A party of friends playing an online game inside of  the  Land of Kallyria, a fictional multiplayer online video game,  must together  face the challenges of  dangerous creatures, treacherous elements, former friends, and restore the land of Kallyria from the evil Queen. The Danger, Magic, Impossible Quests, Mythical Creatures,and in-game challenges they face  bring them closer together as friends and help them face their real life challenges outside in the real world.  ',
 		title: 'Quest of Heroes',
 		subImgs: [
-			'../img/qoh-concept-01.png',
-			'../img/qoh-concept-02.png',
+			'../img/qoh-concept-01.jpg',
+			'../img/qoh-concept-02.jpg',
 		],
 		format: 'Series',
 		genre: 'Fantasy, Gaming, Comedy',
@@ -62,10 +62,10 @@ const posters = [
 		html: 'quest-of-heros',
 	},
 	{
-		src: '../img/ather-fallen-poster.png',
+		src: '../img/ather-fallen-poster.jpg',
 		text: 'When a young and talented engineer is taken captive on a routine fuel run for his hydrogen powered city in the sky, he will be thrust into a world of deceit and a lie decades old that he can either ignore or work with a fiery former pirate and her crew to put right.  A story of friendship, betrayal, and loss, Aether Fallen shows that despite the lingering of darkness and lies in the world, with the right people behind us, anything is possible. That no matter where you’re from or the origins of one’s birth, greatness and adventure can be found by those who seek it.',
 		title: 'Ather Fallen',
-		subImgs: ['../img/af-concept.png'],
+		subImgs: ['../img/af-concept.jpg'],
 		format: 'Series',
 		genre: 'Drama, Adventure',
 		audience: 'Teens, Adults',
