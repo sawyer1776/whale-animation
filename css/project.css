@@ -131,7 +131,21 @@
 }
 .project-pg-related-title {
 	padding-top: 1rem;
-	font-size: 2rem;
-	text-decoration: underline;
+	font-size: 1.8rem;
+	color: var(--color-primary);
+	color: grey;
+}
+
+.prject-pg-related-link {
 	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: inherit;
 }

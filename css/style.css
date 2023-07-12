@@ -404,7 +404,6 @@ video {
 
 .poster-content {
 	display: none;
-
 	flex-direction: column;
 	padding: 10rem;
 	color: var(--wht);
@@ -927,13 +926,13 @@ video {
 		--poster-content-w: 55vh;
 	}
 
-	.poster-img {
+	/* .poster-img {
 		width: 55vh;
 		height: 85vh;
 		margin: 0;
 		padding: 0;
 		transition: all 250ms;
-	}
+	} */
 	.poster-wide {
 		width: 55vh;
 		height: 85vh;
@@ -980,10 +979,10 @@ video {
 	}
 	.projects-content {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		padding: 0 auto;
-		width: 92vw;
-		max-width: 100rem;
+		width: 90vw;
+		max-width: 90rem;
 		margin: 0;
 		gap: 2vw;
 		list-style: none;
@@ -1181,13 +1180,13 @@ video {
 	.projects-content {
 		gap: 4vh;
 	}
-	.poster-img {
+	/* .poster-img {
 		width: 40vh;
 		height: 62vh;
 		margin: 0;
 		padding: 0;
 		transition: all 250ms;
-	}
+	} */
 	.poster-paragraph {
 		padding: 1.25rem;
 	}
