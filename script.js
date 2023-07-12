@@ -232,7 +232,7 @@ const projectsImgs = function (imgs) {
 };
 const createImg = function (index) {
 	const newItem = `<li class="projects-poster" data-id=${index}>
-				<a href="projects/project.html" class="poster-wide "> 
+				<a href="projects/${posters[index].html}.html" class="poster-wide "> 
 			
 			 <img src="${posters[index].src}" class="poster-img shadow" alt="Poster of Animation Project"/> 
 		
