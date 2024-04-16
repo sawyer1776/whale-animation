@@ -65,7 +65,12 @@ const posters = [
 		src: '../img/ather-fallen-poster.jpg',
 		text: 'When a young and talented engineer is taken captive on a routine fuel run for his hydrogen powered city in the sky, he will be thrust into a world of deceit and a lie decades old that he can either ignore or work with a fiery former pirate and her crew to put right.  A story of friendship, betrayal, and loss, Aether Fallen shows that despite the lingering of darkness and lies in the world, with the right people behind us, anything is possible. That no matter where you’re from or the origins of one’s birth, greatness and adventure can be found by those who seek it.',
 		title: 'Ather Fallen',
-		subImgs: ['../img/af-concept.jpg'],
+		subImgs: [
+			'../img/aether-carrier-attack.jpg',
+			'../img/af-concept.jpg',
+			'../img/aether-skyscape.jpg',
+			'../img/aether-vulture.jpg',
+		],
 		format: 'Series',
 		genre: 'Drama, Adventure',
 		audience: 'Teens, Adults',
@@ -236,11 +241,11 @@ const projectsImgs = function (imgs) {
 };
 const createImg = function (index) {
 	const newItem = `<li class="projects-poster" data-id=${index}>
-				<a href="projects/${posters[index].html}.html" class="poster-wide "> 
-			
-			 <img src="${posters[index].src}" class="poster-img shadow" alt="Poster of Animation Project"/> 
-		
-			
+				<a href="projects/${posters[index].html}.html" class="poster-wide ">
+
+			 <img src="${posters[index].src}" class="poster-img shadow" alt="Poster of Animation Project"/>
+
+
 				</a>
 			</li> `;
 	// const newItem = `<li class="projects-poster" data-id=${index}>
@@ -533,7 +538,7 @@ posters.forEach((poster, posterIndex) => {
 		${
 			poster.subImgs.length > 0
 				? `
-			
+
 			<section class="project-pg-imgs-container">
       <div class="project-pg-imgs">
 			<img class="project-pg-img shadow " src="${
@@ -545,7 +550,7 @@ posters.forEach((poster, posterIndex) => {
 					? `
 
 				<div class="project-pg-img-thumbnails">
-			${imgThumbnailMarkup} 
+			${imgThumbnailMarkup}
 			>
       </div>
 			`
@@ -557,8 +562,8 @@ posters.forEach((poster, posterIndex) => {
 		}
     <section class="project-pg-related">
 			${relatedPosters}
-     
-      
+
+
     </section>`;
 		document
 			.querySelector(`.insert-${poster.html}`)
