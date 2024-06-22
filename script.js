@@ -41,6 +41,7 @@ const posters = [
 		subImgs: [
 			'../img/mountains-concept.jpg',
 			'../img/wave_new_edit-1.jpg',
+			'../img/yellowstone.jpg',
 		],
 		format: 'Series',
 		genre: 'Adventure, Travel, Wildlife',
@@ -55,6 +56,10 @@ const posters = [
 		subImgs: [
 			'../img/qoh-concept-01.jpg',
 			'../img/qoh-concept-02.jpg',
+			'../img/qoh-mia-soccer.jpg',
+			'../img/qoh-poster-2.jpg',
+			'../img/qoh-poster-3.jpg',
+			'../img/qoh-hap-dragon.jpg',
 		],
 		format: 'Series',
 		genre: 'Fantasy, Gaming, Comedy',
@@ -75,6 +80,16 @@ const posters = [
 		genre: 'Drama, Adventure',
 		audience: 'Teens, Adults',
 		html: 'ather-fallen',
+	},
+	{
+		src: '../img/dts-poster.jpg',
+		text: 'Blaze, an eager young firefly earnestly shows off his explosive dance skills to attract his true love, but must overcome discouragement. Meanwhile, his wide-eyed admirer, Lumi, persists through the perils of the forest, and clumsy feet, so they can find one another. Although timing may not be on their side, a few good friends call in reinforcements to assist.',
+		title: 'A Dance to Shine',
+		subImgs: [],
+		format: 'Short Film',
+		genre: 'DMusical',
+		audience: 'Family',
+		html: 'a-dance-to-shine',
 	},
 ];
 // Selectors
